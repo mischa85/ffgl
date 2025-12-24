@@ -24,10 +24,10 @@ target_include_directories(ffgl-sdk PUBLIC
 
 target_compile_features(ffgl-sdk PUBLIC cxx_std_11)
 
-# we need glew (except on macOS)
+# we need glad (except on macOS)
 if (NOT APPLE)
-    find_package(GLEW REQUIRED)
-    target_link_libraries(ffgl-sdk PRIVATE GLEW::GLEW)
+    find_package(GLAD REQUIRED)
+    target_link_libraries(ffgl-sdk PRIVATE GLAD::GLAD)
 endif()
 
 include(GNUInstallDirs)

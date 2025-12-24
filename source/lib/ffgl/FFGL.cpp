@@ -105,7 +105,7 @@ bool InitGLExts()
 		return initResult;
 	triedInit = true;
 
-	if( glewInit() != GLEW_OK )
+	if( !gladLoadGL( gladGetProcAddressPtr() ) )
 		return false;
 	initResult = true;
 	return initResult;

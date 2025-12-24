@@ -207,7 +207,7 @@
 #include <windows.h>
 //If this include cannot be found you may have created a new project but did not add the glew property page yet.
 //Go to the Property Manager window (usually docked with the Solution Explorer) and add {root}/deps/glew.props.
-#include <GL/glew.h>
+#include <glad/gl.h>
 #undef NOGDICAPMASKS
 #undef NOVIRTUALKEYCODES
 #undef NOWINMESSAGES
@@ -308,7 +308,7 @@ typedef unsigned __int64 FFUInt64;
 #if defined( FFGL_MACOS )
 #include <OpenGL/gl3.h>
 #elif defined( FFGL_LINUX )
-#include <GL/glew.h>
+#include <glad/gl.h>
 #else
 #error define this for your OS
 #endif
